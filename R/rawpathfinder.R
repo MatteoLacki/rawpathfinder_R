@@ -24,5 +24,7 @@ rawpathfinder = function(query,
              encode = "json")
   query_res = unlist(content(res))
   query_res = data.frame(pattern=unlist(query_res), unix.path=names(query_res), row.names = NULL)
-  query_res[order(query_res$pattern),]
+  query_res = query_res[order(query_res$pattern),]
+  rownames(query_res) = NULL
+  query_res
 }
