@@ -1,0 +1,26 @@
+Package: rawpathfinder
+Type: Package
+Title: Establish unix positions of files using the flask app
+Version: 0.0.1
+Authors@R:
+   c(
+    person(
+      given="Matteo",
+      family="Lacki",
+      role=c("aut","cre","cph"),
+      email="matteo.lacki@gmail.com",
+      comment=c(ORCID="0000-0001-7415-4748")
+    )
+   )
+Maintainer: Matteo Lacki <matlacki@uni-mainz.de>
+Description: A simple R package aiming at getting information about the 
+  positions of files on the unix server.
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown=TRUE)
+LazyData: true
+Depends:
+  R (>= 4.0.0)
+Imports:
+  httr
+RoxygenNote: 7.1.1
