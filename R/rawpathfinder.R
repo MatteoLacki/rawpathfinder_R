@@ -22,23 +22,7 @@ rawpathfinder = function(query,
   res = POST(url = service.url,
              body = list(query=query),
              encode = "json")
-  query_res = content(res)
-  data.frame(file=names(query_res), unix.path=unlist(query_res))
+  query_res = unlist(content(res))
+  query_res = data.frame(pattern=unlist(query_res), unix.path=names(query_res), row.names = NULL)
+  query_res[order(query_res$pattern),]
 }
-
-
-
-# query = c("M210903_008_1_1_4704.d",
-#           "M210903_017_1_1_4713.d",
-#           "M210903_026_1_1_4722.d",
-#           "M210903_035_1_1_4731.d",
-#           "M210903_044_1_1_4740.d",
-#           "M210903_053_1_1_4749.d",
-#           "M210903_063_1_1_4759.d",
-#           "M210903_072_1_1_4768.d",
-#           "M210903_081_1_1_4777.d",
-#           "M210903_090_1_1_4786.d",
-#           "M210903_099_1_1_4795.d",
-#           "M210903_108_1_1_4804.d")
-#
-# rawpathfinder(query[1:4])
