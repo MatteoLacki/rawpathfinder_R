@@ -1,7 +1,7 @@
 Package: rawpathfinder
 Type: Package
 Title: Establish unix positions of files using the flask app
-Version: 0.0.1
+Version: 0.0.2
 Authors@R:
    c(
     person(
